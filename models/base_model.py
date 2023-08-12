@@ -47,11 +47,11 @@ class BaseModel:
             dict: A dictionary representation of the object, including
             the class name, created_at, and updated_at attributes.
         """
-        form: str = "%Y-%m-%dT%H:%M:%S.%f"
+        date_format: str = "%Y-%m-%dT%H:%M:%S.%f"
         properties: dict = self.__dict__
         properties["__class__"] = self.__class__.__name__
-        properties["created_at"] = self.created_at.strftime(form)
-        properties["updated_at"] = self.updated_at.strftime(form)
+        properties["created_at"] = self.created_at.strftime(date_format)
+        properties["updated_at"] = self.updated_at.strftime(date_format)
         # properties["created_at"] = datetime.isoformat(self.updated_at, form)
         # properties["updated_at"] = datetime.isoformat(self.updated_at, form)
 
