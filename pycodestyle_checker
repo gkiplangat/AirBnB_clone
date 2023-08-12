@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Find all .py files in the current directory and its subdirectories
+py_files=$(find . -type f -name "*.py")
+
+# Check coding style using pycodestyle
+for file in $py_files; do
+    pycodestyle "$file"
+done
+
