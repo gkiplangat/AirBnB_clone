@@ -9,10 +9,25 @@ import uuid
 
 class BaseModel:
     """This defines a BaseModel class"""
-    def __init__(self) -> None:
-        self.id: str = str(uuid.uuid4())
-        self.created_at: datetime = datetime.now()
-        self.updated_at: datetime = datetime.now()
+
+    def __init__(self, *args: tuple, **kwargs: dict) -> None:
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
+                if key in ["created_at", "updated_at"]:
+                    setattr(
+                        self,
+                        key,
+                        datetime.strptime(str(value), "%Y-%m-%dT%H:%M:%S.%f"),
+                    )
+                else:
+                    setattr(self, key, value)
+        else:
+            self.id: str = str(uuid.uuid4())
+            self.created_at: datetime = datetime.now()
+
+        self.save()
 
     def __str__(self) -> str:
         return f"{[self.__class__.__name__]} ({self.id}) {self.__dict__}"
