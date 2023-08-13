@@ -4,7 +4,7 @@ import json
 
 class FileStorage:
     """
-        serializes instances to a JSON file and 
+        serializes instances to a JSON file and
         deserializes JSON file to instances
         Args:
             __file_path: string - path to the JSON file
