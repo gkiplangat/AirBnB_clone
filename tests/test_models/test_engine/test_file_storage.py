@@ -5,13 +5,16 @@ Unittest classes:
     TestFileStorageMethods
 """
 import unittest
-from models.engine.file_storage import FileStorage
+from unittest.mock import mock_open, patch
+from models.engine.file_storage import FileStorage, Dummy
 
 
 class TestFileStorage(unittest.TestCase):
 
-    @patch('builtins.open', new_callable=mock_open, r_data='{}')
-    def setUp(self, mock_file):
+    def setUp(self):
+        self.mock_file = mock_open(read_data='{"Dummy.test_id": {"__class__": "Dummy", "id": "test_id"}}')
+        self.patcher = patch('builtins.open', self.mock_file)
+        self.patcher.start()
         self.storage = FileStorage()
 
     def test_all_method(self):
