@@ -1,6 +1,9 @@
+"""
+This module contains the BaseModel class that defines all common
+attributes/methods for other classes.
+"""
 import uuid
 from datetime import datetime
-
 from models import storage
 
 
