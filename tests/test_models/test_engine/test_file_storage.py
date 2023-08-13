@@ -1,6 +1,11 @@
+#!/usr/bin/python3
+"""Defines unittests for models/engine/file_storage.py.
+Unittest classes:
+    TestFileStorageInstantiation
+    TestFileStorageMethods
+"""
 import unittest
-from unittest.mock import mock_open, patch
-from models import FileStorage
+from models.engine.file_storage import FileStorage
 
 
 class TestFileStorage(unittest.TestCase):

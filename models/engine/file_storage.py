@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """This module contains the definition of a FileStorage class"""
 import json
-import o
 
 
 class FileStorage:
