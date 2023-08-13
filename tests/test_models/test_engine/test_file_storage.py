@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import mock_open, patch
-from your_module import FileStorage
+from models import FileStorage
 
 
 class TestFileStorage(unittest.TestCase):
