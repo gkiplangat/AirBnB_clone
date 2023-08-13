@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
+"""
+Command line interpreter for AirBnB
+"""
 import cmd
+from models import storage
+
 
 
 class HBNBCommand(cmd.Cmd):
