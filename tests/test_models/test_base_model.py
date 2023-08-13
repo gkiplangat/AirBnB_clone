@@ -77,7 +77,7 @@ class TestBaseModelInstantiation(unittest.TestCase):
 
     def test_instantiation_with_None_kwargs(self) -> None:
         with self.assertRaises(ValueError):
-            BaseModel()
+            BaseModel(id=None, created_at=None, updated_at=None)
 
     def test_instantiation_with_args_and_kwargs(self) -> None:
         dt_obj = datetime.now()
