@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 
 """ 
     Task: 8. First User
@@ -13,4 +13,3 @@ class User(BaseModel):
     password = ""
     first_name = ""
     last_name = ""
-    
