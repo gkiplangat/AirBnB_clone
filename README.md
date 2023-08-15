@@ -38,6 +38,7 @@ $ echo "all" | ./console.py
 ```
 
 You can also use a file that contains the commands you want to run:
+
 ```bash
 $ cat commands.txt
 all User
