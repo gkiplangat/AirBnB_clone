@@ -1,25 +1,27 @@
 #!/usr/bin/python3
-"""Unittest module for the City Class."""
+""" Unittest module for the City Class."""
 
 import unittest
-from datetime import datetime
-import time
-from models.city import City
+import os
+
 import re
 import json
+import time
+
+from datetime import datetime
+from models.city import City
 from models.engine.file_storage import FileStorage
-import os
 from models import storage
 from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):
 
-    """Test Cases for the City class."""
+    """ City Class Test Case Scenarios"""
 
-    def setUp(self):
-        """Sets up test methods."""
-        pass
+#    def setUp(self):
+#        """ Sets up test methods."""
+#        pass
 
     def tearDown(self):
         """Tears down test methods."""
