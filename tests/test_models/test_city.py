@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Unittest module for the City Class."""
+""" Defines unittests for the models/city.py."""
 
 import unittest
 import os
@@ -17,24 +17,24 @@ from models.base_model import BaseModel
 
 class TestCity(unittest.TestCase):
 
-    """ City Class Test Case Scenarios"""
+    """ Units to test the City Class Scenarios"""
 
-#    def setUp(self):
-#        """ Sets up test methods."""
-#        pass
+    def setUpClass(self):
+        """ Sets up set up any necessary resources."""
+        pass
 
-    def tearDown(self):
-        """Tears down test methods."""
+    def tearDownClass(self):
+        """  Method to clean and reset resources used. """
         self.resetStorage()
         pass
 
     def resetStorage(self):
-        """Resets FileStorage data."""
+        """ Resetting changes made to FileStorage data."""
         FileStorage._FileStorage__objects = {}
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_8_instantiation(self):
+    def test_instantiation(self):
         """Tests instantiation of City class."""
 
         b = City()
