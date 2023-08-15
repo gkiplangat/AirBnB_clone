@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
-""" 
+"""
     Task: 9. More classes!
     Create the Place Module
 """
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
-    """ 
+    """
         Place class inherits from BaseModel
         Manage place objects
     """
@@ -24,3 +25,4 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+    
