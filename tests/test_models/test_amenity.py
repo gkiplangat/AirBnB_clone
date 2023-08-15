@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Defines unittests for the models/city.py."""
+""" Defines unittests for the models/amenity.py."""
 
 import unittest
 import os
