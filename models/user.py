@@ -2,13 +2,16 @@
 
 """ 
     Task: 8. First User
-    User Module
+    Create the User Module
 """
 
 from models.base_model import BaseModel
 
 class User(BaseModel):
-    """ User class inherits from BaseModel"""
+    """ 
+        User class inherits from BaseModel.
+        Manage user objects.
+    """
     email = ""
     password = ""
     first_name = ""
