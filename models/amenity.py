@@ -14,4 +14,3 @@ class Amenity(BaseModel):
         Manage amenity objects
     """
     name = ""
-    

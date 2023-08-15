@@ -14,4 +14,3 @@ class State(BaseModel):
         Manage state objects
     """
     name = ""
-    
