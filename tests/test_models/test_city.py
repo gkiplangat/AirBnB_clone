@@ -34,7 +34,7 @@ class TestCity(unittest.TestCase):
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_instantiation(self):
+    def test_all_instances(self):
         """ City class instance testing. """
 
         city_subclass = City()
@@ -42,7 +42,7 @@ class TestCity(unittest.TestCase):
         self.assertIsInstance(city_subclass, City)
         self.assertTrue(issubclass(type(city_subclass), BaseModel))
 
-    def test_8_attributes(self):
+    def test_all_attributes(self):
         """ City class attributes testing. """
         attributes = storage.attributes()["City"]
         city_obj = City()

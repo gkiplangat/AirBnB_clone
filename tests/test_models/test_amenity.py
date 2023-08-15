@@ -38,7 +38,7 @@ class TestAmenity(unittest.TestCase):
         """ Amenity class instance testing. """
 
         Amenity_subclass = Amenity()
-        self.assertEqual(str(type(Amenity_subclass)), "<class 'models.city.City'>")
+        self.assertEqual(str(type(Amenity_subclass)), "<class 'models.amenity.Amenity'>")
         self.assertIsInstance(Amenity_subclass, Amenity)
         self.assertTrue(issubclass(type(Amenity_subclass), BaseModel))
 
