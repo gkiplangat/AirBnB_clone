@@ -35,20 +35,20 @@ class TestCity(unittest.TestCase):
             os.remove(FileStorage._FileStorage__file_path)
 
     def test_instantiation(self):
-        """Tests instantiation of City class."""
+        """ City class instance testing. """
 
-        b = City()
-        self.assertEqual(str(type(b)), "<class 'models.city.City'>")
-        self.assertIsInstance(b, City)
-        self.assertTrue(issubclass(type(b), BaseModel))
+        city_subclass = City()
+        self.assertEqual(str(type(city_subclass)), "<class 'models.city.City'>")
+        self.assertIsInstance(city_subclass, City)
+        self.assertTrue(issubclass(type(city_subclass), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of City class."""
+        """ City class attributes testing. """
         attributes = storage.attributes()["City"]
-        o = City()
-        for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
+        city_obj = City()
+        for x, y in attributes.items():
+            self.assertTrue(hasattr(city_obj, x))
+            self.assertEqual(type(getattr(city_obj, x, None)), y)
 
 
 if __name__ == "__main__":
