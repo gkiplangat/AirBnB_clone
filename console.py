@@ -33,7 +33,9 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, arg):
-        """ Creates new instance of Basemodel, 
+        """ 
+            Task: 7. Console 0.1
+            Creates new instance of Basemodel, 
             saves it into JSON file
             and prints its id.
         """
@@ -42,11 +44,11 @@ class HBNBCommand(cmd.Cmd):
             return
         
         class_name = arg
-        if class_name not in ["BaseModel"]:
+        if class_name not in storage.all_classes:
             print("** class doesn't exist **")
             return
         
-        new_instance = BaseModel()
+        new_instance = storage.classes()[class_name]()
         new_instance.save()
         print(new_instance.id)
 
