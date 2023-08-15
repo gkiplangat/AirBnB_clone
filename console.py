@@ -39,16 +39,18 @@ class HBNBCommand(cmd.Cmd):
             saves it into JSON file
             and prints its id.
         """
-        if arg != "" or arg is not None:
-            if arg not in storage.classes():
-                print("** class doesn't exist **")
-            else:
-                # create an instance of the given class
-                obj_intance = storage.classes()[arg]()
-                obj_intance.save()
-                print(obj_intance.id)
-        else:
+        if not arg:
             print("** class name missing **")
+            return
+        
+        class_name = arg
+        if class_name not in storage.all_classes:
+            print("** class doesn't exist **")
+            return
+        
+        new_instance = storage.classes()[class_name]()
+        new_instance.save()
+        print(new_instance.id)
 
 
 if __name__ == '__main__':
